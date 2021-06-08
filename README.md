@@ -3,7 +3,7 @@
 * Not finish yet.
 
 # Platform
-* windows
+* windows 10
 * visual studio 2017
 
 # Language
