@@ -41,8 +41,10 @@ void server_init(struct sockaddr_in* server) {
 }
 
 int server_connect(SOCKET* s, struct sockaddr_in* server) {
+	//Connect to local server
+	if (bind(*s, (struct sockaddr *)server, sizeof(*server)) < 0)
 	//Connect to remote server
-	if (connect(*s, (struct sockaddr *)server, sizeof(*server)) < 0)
+	//if (connect(*s, (struct sockaddr *)server, sizeof(*server)) < 0)
 	{
 		puts("connect error\n");
 		if(WSAGetLastError() == 10061)
