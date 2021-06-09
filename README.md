@@ -1,7 +1,7 @@
 # DDK_web_crawler
 * It is a sample web crawler.
 * Not finish yet.
-* I am thinking about the structure and encapsulate the basic function.
+* I am thinking about the structure and encapsulating the basic functions.
 
 # Platform
 * windows 10
