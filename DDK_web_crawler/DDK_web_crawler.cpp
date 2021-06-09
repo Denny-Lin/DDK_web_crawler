@@ -9,6 +9,11 @@
 using namespace std;
 #pragma warning(disable : 4996)
 
+typedef struct web_crawler {
+	WSADATA* wsa;
+	SOCKET* s;
+	struct sockaddr_in* server;
+}web_crawler;
 
 int main()
 {
@@ -21,11 +26,8 @@ int main()
 	server_init(server);
 	server_connect(s,server);
 
-	/*const char* url= (char*)malloc(15*sizeof(char));
-	url = "Hello World!";
-	url = "Hello";
-	cout << url << endl;*/
+	send_data(s,"GET / HTTP/1.1\r\n\r\n");//send request
 
-	send_data(s,"Hello World!");
-
+	receive_data(s);//sever response
+	
 }

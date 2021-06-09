@@ -13,5 +13,6 @@ int server_connect(SOCKET*, struct sockaddr_in*); //Connected to server by socke
 
 int send_data(SOCKET*, const char*); //Send data to server.
 
+int receive_data(SOCKET*); //Receive data from server.
 
 #endif // !_WEB_CRAWLER_
