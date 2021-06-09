@@ -1,6 +1,7 @@
 # DDK_web_crawler
 * It is a sample web crawler.
 * Not finish yet.
+* I am thinking about the structure and encapsulate the basic function.
 
 # Platform
 * windows 10
@@ -8,4 +9,9 @@
 
 # Language
 * C/C++
+
+# Features
+* fast
+* parallel
+* ...
 
