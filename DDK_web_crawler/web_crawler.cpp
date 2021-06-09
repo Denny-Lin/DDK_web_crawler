@@ -40,7 +40,7 @@ void server_init(struct sockaddr_in* server, const char * ip, const int port) {
 	printf("Server initialised.\n");
 }
 
-int server_connect(SOCKET* s, struct sockaddr_in* server) {
+int connect_server(SOCKET* s, struct sockaddr_in* server) {
 	//Connect to local server
 	//if (bind(*s, (struct sockaddr *)server, sizeof(*server)) < 0)
 	//Connect to remote server

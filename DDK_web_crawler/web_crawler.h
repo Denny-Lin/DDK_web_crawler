@@ -5,11 +5,11 @@
 
 int winsock_init(WSADATA*); //Winsock startup.
 
-int create_socket(SOCKET*);
+int create_socket(SOCKET*); //Create a local socket and use this socket to connect a remote machine.
 
 void server_init(struct sockaddr_in*, const char* , const int); //Initialize the server you want to connect
 
-int server_connect(SOCKET*, struct sockaddr_in*); //Connected to server by socket.
+int connect_server(SOCKET*, struct sockaddr_in*); //Connected to server by socket.
 
 int send_data(SOCKET*, const char*); //Send data to server.
 

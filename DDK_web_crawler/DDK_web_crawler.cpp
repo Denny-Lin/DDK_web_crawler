@@ -24,7 +24,7 @@ int main()
 	winsock_init(wsa);
 	create_socket(s);
 	server_init(server, "74.6.136.150", 80);// yahoo.com.tw
-	server_connect(s, server);
+	connect_server(s, server);
 
 	send_data(s,"GET / HTTP/1.1\r\n\r\n");//send request
 
