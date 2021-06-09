@@ -32,10 +32,10 @@ int create_socket(SOCKET* s) {
 	return 1;
 }
 
-void server_init(struct sockaddr_in* server) {
-	server->sin_addr.s_addr = inet_addr("74.6.136.150"); //IP 74.6.136.150 127.0.0.1
+void server_init(struct sockaddr_in* server, const char * ip, const int port) {
+	server->sin_addr.s_addr = inet_addr(ip); //IP 74.6.136.150 127.0.0.1
 	server->sin_family = AF_INET;
-	server->sin_port = htons(80); //port
+	server->sin_port = htons(port);
 
 	printf("Server initialised.\n");
 }

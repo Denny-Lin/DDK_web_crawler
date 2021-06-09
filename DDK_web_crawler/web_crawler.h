@@ -7,7 +7,7 @@ int winsock_init(WSADATA*); //Winsock startup.
 
 int create_socket(SOCKET*);
 
-void server_init(struct sockaddr_in*); //Initialize the server you want to connect
+void server_init(struct sockaddr_in*, const char* , const int); //Initialize the server you want to connect
 
 int server_connect(SOCKET*, struct sockaddr_in*); //Connected to server by socket.
 
