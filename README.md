@@ -2,6 +2,7 @@
 * It is a sample web crawler.
 * Not finish yet.
 * I am thinking about the structure and encapsulating the basic functions.
+* I use python structure.
 
 # Platform
 * windows 10
