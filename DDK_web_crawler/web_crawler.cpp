@@ -26,9 +26,9 @@ int web_crawler::socket()
 	return 0;
 }
 
-int web_crawler::connect()
+int web_crawler::connect(const char* ip, int port)
 {
-	server_init(server, "74.6.136.150", 80); // yahoo.com.tw
+	server_init(server, ip, port); // yahoo.com.tw
 	connect_server(s, server);
 	return 0;
 }
@@ -42,6 +42,13 @@ int web_crawler::send(const char * message)
 int web_crawler::receive()
 {
 	receive_data(s);//sever response
+	return 0;
+}
+
+int web_crawler::close()
+{
+	closesocket(*s);
+	WSACleanup();
 	return 0;
 }
 
@@ -97,7 +104,7 @@ int connect_server(SOCKET* s, struct sockaddr_in* server) {
 int send_data(SOCKET* s, const char* message) {
 	//Send some data
 	//message = "GET / HTTP/1.1\r\n\r\n"; //CRLF (carriage return followed by line feed)
-	if (send(*s, message, strlen(message), 0) < 0)
+	if (send(*s, message, (int)strlen(message), 0) < 0)
 	{
 		puts("Send failed\n");
 		return 0;

@@ -10,9 +10,10 @@ typedef struct web_crawler {
 	struct sockaddr_in* server;
 
 	int socket();
-	int connect();
+	int connect(const char*, int);
 	int send(const char*);
 	int receive();
+	int close();
 }web_crawler_t;
 
 int web_crawler_init(web_crawler_t*);

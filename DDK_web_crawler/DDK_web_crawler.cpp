@@ -17,9 +17,11 @@ int main()
 
 	client->socket();
 
-	client->connect();
+	client->connect("74.6.136.150", 80);
 
 	client->send("GET / HTTP/1.1\r\n\r\n");
 
 	client->receive();
+
+	client->close();
 }
