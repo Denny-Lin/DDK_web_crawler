@@ -7,6 +7,44 @@
 using namespace std;
 #pragma warning(disable:4996) 
 
+int web_crawler_init(web_crawler_t* web_crawler_t) {
+	WSADATA* wsa = new WSADATA;
+	SOCKET* s = new SOCKET;
+	struct sockaddr_in* server = new struct sockaddr_in;
+
+	web_crawler_t->wsa = wsa;
+	web_crawler_t->s = s;
+	web_crawler_t->server = server;
+	
+	return 0;
+}
+
+int web_crawler::socket()
+{
+	winsock_init(wsa);
+	create_socket(s);
+	return 0;
+}
+
+int web_crawler::connect()
+{
+	server_init(server, "74.6.136.150", 80); // yahoo.com.tw
+	connect_server(s, server);
+	return 0;
+}
+
+int web_crawler::send(const char * message)
+{
+	send_data(s, message);//send request
+	return 0;
+}
+
+int web_crawler::receive()
+{
+	receive_data(s);//sever response
+	return 0;
+}
+
 int winsock_init(WSADATA* wsa) {
 
 	printf("Initialising Winsock...\n");

@@ -9,25 +9,17 @@
 using namespace std;
 #pragma warning(disable : 4996)
 
-typedef struct web_crawler {
-	WSADATA* wsa;
-	SOCKET* s;
-	struct sockaddr_in* server;
-}web_crawler;
-
 int main()
 {
-	WSADATA* wsa = new WSADATA;
-	SOCKET* s = new SOCKET;
-	struct sockaddr_in* server = new struct sockaddr_in;
+	web_crawler_t* client = new struct web_crawler;
 
-	winsock_init(wsa);
-	create_socket(s);
-	server_init(server, "74.6.136.150", 80);// yahoo.com.tw
-	connect_server(s, server);
+	web_crawler_init(client);
 
-	send_data(s,"GET / HTTP/1.1\r\n\r\n");//send request
+	client->socket();
 
-	receive_data(s);//sever response
-	
+	client->connect();
+
+	client->send("GET / HTTP/1.1\r\n\r\n");
+
+	client->receive();
 }
