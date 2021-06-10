@@ -16,3 +16,7 @@
 * parallel
 * ...
 
+# What function will be added?
+* Download pictures from website.
+* Queue.
+* Change the buffer size of receive funcion. 
