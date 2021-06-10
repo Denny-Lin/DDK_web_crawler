@@ -7,16 +7,11 @@
 using namespace std;
 #pragma warning(disable:4996) 
 
-int web_crawler_init(web_crawler_t* web_crawler_t) {
-	WSADATA* wsa = new WSADATA;
-	SOCKET* s = new SOCKET;
-	struct sockaddr_in* server = new struct sockaddr_in;
-
-	web_crawler_t->wsa = wsa;
-	web_crawler_t->s = s;
-	web_crawler_t->server = server;
-	
-	return 0;
+web_crawler::web_crawler()
+{
+	wsa = new WSADATA;
+	s = new SOCKET;
+	server = new struct sockaddr_in;
 }
 
 int web_crawler::socket()
@@ -51,6 +46,19 @@ int web_crawler::close()
 	WSACleanup();
 	return 0;
 }
+
+/*
+int web_crawler_init(web_crawler_t* web_crawler_t) {
+	WSADATA* wsa = new WSADATA;
+	SOCKET* s = new SOCKET;
+	struct sockaddr_in* server = new struct sockaddr_in;
+
+	web_crawler_t->wsa = wsa;
+	web_crawler_t->s = s;
+	web_crawler_t->server = server;
+
+	return 0;
+}*/
 
 int winsock_init(WSADATA* wsa) {
 

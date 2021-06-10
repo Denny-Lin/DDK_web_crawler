@@ -8,6 +8,7 @@ typedef struct web_crawler {
 	WSADATA* wsa;
 	SOCKET* s;
 	struct sockaddr_in* server;
+	web_crawler(); //default constructor
 
 	int socket();
 	int connect(const char*, int);

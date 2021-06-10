@@ -13,8 +13,6 @@ int main()
 {
 	web_crawler_t* client = new struct web_crawler;
 
-	web_crawler_init(client);
-
 	client->socket();
 
 	client->connect("74.6.136.150", 80);
