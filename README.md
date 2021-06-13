@@ -5,15 +5,15 @@
 * I use python structure.
 
 # Platform
-* windows 10
-* visual studio 2017
+* Windows 10
+* Visual studio 2017
 
 # Language
 * C/C++
 
 # Features
-* fast
-* parallel
+* Fast
+* Parallel
 * ...
 
 # What function will be added?
