@@ -21,6 +21,6 @@
 * Queue.
 * Change the buffer size of receive funcion. 
 * Receive data and save as file.
-* Have DNS function if necessary
-* Use C++ std::thread
+* Have DNS function if necessary.
+* Use C++ std::thread.
 * ...
