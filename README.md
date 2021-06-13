@@ -4,6 +4,7 @@
 * I am thinking about the structure and encapsulating the basic functions.
 * I use python structure.
 * I think I should review the data structure for the interview recently.
+* ...
 
 # Platform
 * Windows 10
@@ -15,7 +16,6 @@
 # Features
 * Fast
 * Parallel
-* ...
 
 # What function will be added?
 * Download pictures from website.
