@@ -20,3 +20,5 @@
 * Download pictures from website.
 * Queue.
 * Change the buffer size of receive funcion. 
+* Receive data and save as file.
+* ...
