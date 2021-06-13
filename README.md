@@ -22,5 +22,6 @@
 * Change the buffer size of receive funcion. 
 * Receive data and save as file.
 * Have DNS function if necessary.
-* Use C++ std::thread.
+* Have a table of url.
+* Use C++ std::thread library to send different url when connected.
 * ...
