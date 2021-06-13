@@ -20,7 +20,7 @@
 * Download pictures from website.
 * Change the buffer size of receive funcion. 
 * Receive data and save as file.
-* Have DNS function if necessary.
+* Have a DNS function if necessary.
 * Have a queue table of url.
 * Use C++ std::thread library to send different url when connected.
 * ...
