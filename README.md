@@ -3,7 +3,7 @@
 * Not finish yet.
 * I am thinking about the structure and encapsulating the basic functions.
 * I use python structure.
-* I think I should review the data structure for the interview recently.
+* I'm back and I will update the function.
 * ...
 
 # Platform
