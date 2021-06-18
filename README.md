@@ -6,7 +6,7 @@
 * I'm back and I will update the function.
 * I have two different compiler environment, so I should check first.
 * The receive function will be changed to save the data that is in the buffer in the kernel space.
-* This buffer save the data from server, and I think it's FIFO.
+* This buffer saved the data from server, and I think it's FIFO.
 * ...
 
 # Platform
