@@ -122,7 +122,7 @@ int send_data(SOCKET* s, const char* message) {
 
 	return 1;
 }
-
+/*
 int receive_data(SOCKET* s) {
 	char server_reply[200]; //If this buffer size over 1M, it will lead to overflow.
 	int recv_size;
@@ -139,6 +139,51 @@ int receive_data(SOCKET* s) {
 	//Add a NULL terminating character to make it a proper string before printing
 	server_reply[recv_size] = '\0';
 	puts(server_reply);
+
+	return 1;
+}*/
+
+int receive_data(SOCKET* s) {
+	char server_reply[200] = {0}; //If this buffer size over 1M, it will lead to overflow.	
+	FILE *fout;
+	int recv_size;
+	int total_len = 0;
+
+	//1.pdf
+	fout = fopen("out.pdf", "ab");
+
+	//2.png
+	//fout = fopen("out.png", "ab");
+
+	if (fout == NULL) {
+		printf("Fail To Open File out1.txt!!");
+		return 0;
+	}
+
+	while (1)
+	{
+		recv_size = recv(*s, server_reply, 200 - 1, 0);
+
+		if (recv_size < 0) {
+			puts("recv failed");
+			return 0;
+		}
+
+		total_len += recv_size;
+
+		//puts(server_reply);   
+		fwrite(server_reply, recv_size, 1, fout);
+
+		printf("\nReceived byte size = %d\nTotal lenght = %d", recv_size, total_len);
+
+		if (!recv_size) {
+			break;
+		}
+	}
+
+	puts("\nReply received\n");
+
+	fclose(fout);
 
 	return 1;
 }
