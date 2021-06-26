@@ -3,7 +3,7 @@
 * Not finish yet.
 * I am thinking about the structure and encapsulating the basic functions.
 * I use python structure.
-* Now we can download anything, such as, pdf..., from the Internet.
+* 6/25, Now we can download anything, such as, pdf..., from the Internet.
 * ...
 
 # Platform
