@@ -4,6 +4,14 @@
 * I am thinking about the structure and encapsulating the basic functions.
 * I use python structure.
 * 6/25, Now we can download anything, such as, pdf..., from the Internet.
+* We should use gethostbyname function (winsock.h).
+* 
+* https://
+* 
+* www.google.com
+* 
+* /?hl=zh-tw
+* 
 * ...
 
 # Platform
