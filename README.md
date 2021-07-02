@@ -14,7 +14,7 @@
 ![image](https://user-images.githubusercontent.com/67073582/124312309-aa669800-dba1-11eb-80ab-558d560b2288.png) <br>
 
 * Use queue to save all the subpages.
-* create a download function(type(jpg, mp3, pdf, ...))
+* create a download function(type(ALL*, jpg, mp3, pdf, ...))
 * ...
 
 # Platform
