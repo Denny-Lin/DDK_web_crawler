@@ -5,13 +5,13 @@
 * I use python structure.
 * 6/25, Now we can download anything, such as, pdf..., from the Internet.
 * We should use gethostbyname function (winsock.h).
-* 
-* https://
-* 
-* www.google.com
-* 
-* /?hl=zh-tw
-* 
+* Analyze:
+  1. https://
+  2. www.google.com
+  3. /?hl=zh-tw <br>
+![image](https://user-images.githubusercontent.com/67073582/124311936-172d6280-dba1-11eb-80b5-6d483d59e2c5.png) <br>
+* Use queue to save all the website.
+* create a download function(type(jpg, mp3, pdf, ...))
 * ...
 
 # Platform
