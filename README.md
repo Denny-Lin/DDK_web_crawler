@@ -3,7 +3,7 @@
 * Not finish yet.
 * I am thinking about the structure and encapsulating the basic functions. Finally, I use python structure.
 * 6/25, we can download anything, such as, pdf..., from the Internet.
-* 7/3, we should use gethostbyname function (winsock.h).
+* 7/3, we should use gethostbyname function (winsock.h) and create a function called DNStoIP();.
 * Analyze: <br>
 ![image](https://user-images.githubusercontent.com/67073582/124311936-172d6280-dba1-11eb-80b5-6d483d59e2c5.png) <br>
 ![image](https://user-images.githubusercontent.com/67073582/124312309-aa669800-dba1-11eb-80ab-558d560b2288.png) <br>
