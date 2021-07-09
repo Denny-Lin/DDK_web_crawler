@@ -20,7 +20,7 @@
 # How to analyze the address?
 * Follow below:
 ```C
-#include<string.h>
+#include <string.h>
 
 const char* address = "https://github.com/Denny-Lin/DDK_web_crawler/";
 char* ptr = strstr(address,"https://");
@@ -28,6 +28,11 @@ char* ptr = strstr(address,"https://");
 if(ptr==NULL) return;
 
 p=p+8; //move this ptr from 'h' to 'g'
+
+sscanf(address,"%[^/]%s", host, directory_name_and_file_name);
+
+//host = github.com/
+//directory_name_and_file_name = /Denny-Lin/DDK_web_crawler/
 
 ```
 
