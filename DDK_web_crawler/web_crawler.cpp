@@ -85,6 +85,23 @@ int create_socket(SOCKET* s) {
 	return 1;
 }
 
+char* DNStoIP(const char * hostname) {
+	struct hostent * host = gethostbyname(hostname);
+
+	if (!host) {
+		puts("Get IP address error!");
+		
+		return (char*)("127.0.0.1");
+	}
+
+	for (int i = 0; host->h_addr_list[i]; i++) {
+		printf("IP addr %d: %s \n ", i + 1, inet_ntoa(*(struct in_addr *) host->h_addr_list[i]));
+	}
+
+	return inet_ntoa(*(struct in_addr *) host->h_addr_list[0]);//return the first IP address.
+}
+
+
 void server_init(struct sockaddr_in* server, const char * ip, const int port) {
 	server->sin_addr.s_addr = inet_addr(ip); //IP 74.6.136.150 127.0.0.1
 	server->sin_family = AF_INET;
@@ -149,11 +166,8 @@ int receive_data(SOCKET* s) {
 	int recv_size;
 	int total_len = 0;
 
-	//1.pdf
-	fout = fopen("out.pdf", "ab");
-
-	//2.png
-	//fout = fopen("out.png", "ab");
+	//pdf
+	fout = fopen("out.pdf", "wb");
 
 	if (fout == NULL) {
 		printf("Fail To Open File out1.txt!!");

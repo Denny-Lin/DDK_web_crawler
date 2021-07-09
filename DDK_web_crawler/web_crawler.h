@@ -17,6 +17,8 @@ typedef struct web_crawler {
 	int close();
 }web_crawler_t;
 
+char* DNStoIP(const char *);
+
 int web_crawler_init(web_crawler_t*);
 
 int winsock_init(WSADATA*); //Winsock startup.
