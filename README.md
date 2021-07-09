@@ -17,6 +17,19 @@
 * Use queue to save all the subpages.
 * Create a download function(type(ALL*, jpg, mp3, pdf, ...)).
 * ...
+# How to analyze the address?
+* Follow below:
+```C
+#include<string.h>
+
+const char* address = "https://github.com/Denny-Lin/DDK_web_crawler/";
+char* ptr = strstr(address,"https://");
+
+if(ptr==NULL) return;
+
+p=p+8; //move this ptr from 'h' to 'g'
+
+```
 
 # Platform
 * Windows 10
