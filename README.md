@@ -5,6 +5,9 @@
 * 6/25, we can download anything, such as, pdf..., from the Internet.
 * 7/3, we should use gethostbyname function (winsock.h) and create a function called DNStoIP();.
 * 7/9, DNStoIP() is done;
+* I will change connect() to be more flexible, such as, the user can input IP or address whatever he/she likes.
+* It will be "connect(IP or address, port)".
+* ...
 
 * Analyze: <br>
 ![image](https://user-images.githubusercontent.com/67073582/124311936-172d6280-dba1-11eb-80b5-6d483d59e2c5.png) <br>
