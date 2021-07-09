@@ -23,6 +23,9 @@
 #include <string.h>
 
 const char* address = "https://github.com/Denny-Lin/DDK_web_crawler/";
+char host[256]={0};
+char directory_name_and_file_name[256]={0};
+
 char* ptr = strstr(address,"https://");
 
 if(ptr==NULL) return;
