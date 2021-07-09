@@ -7,6 +7,7 @@
 * 7/9, DNStoIP() is done;
 * I will change connect() to be more flexible, such as, the user can input IP or address whatever he/she likes.
 * It will be "connect(IP or address, port)".
+* I also think about should I save all info of "hostent" in structure? 
 * ...
 
 * Analyze: <br>
